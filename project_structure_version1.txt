@@ -1,0 +1,11 @@
+analyst-and-auditor/
+├── .gitignore
+├── README.md
+├── DECISIONS.md                                # The required 2-page architectural defense
+├── benchmarks/                                 # The 8 test questions + evaluation traces
+├── logs/                                       # Your AI interaction transcripts
+│   └── 01_system_architecture_and_design.md
+└── src/
+    ├── analyst/                                # Part A: Planner, searcher, scraper, memory
+    ├── auditor/                                # Part B: Claim extractor, fact verifier
+    └── telemetry/                              # Token usage & INR cost calculation
