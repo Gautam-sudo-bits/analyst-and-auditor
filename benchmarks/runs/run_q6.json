@@ -1,0 +1,80 @@
+{
+  "question_id": 6,
+  "question_text": "Did any former engineering directors or product leaders from the previous employers of Lenskart's tech head transition into Indian omnichannel jewellery retail (such as BlueStone, CaratLane, or Titan) between 2023 and 2024?",
+  "wall_clock_seconds": 28.983,
+  "exceeded_2min_ceiling": false,
+  "total_prompt_tokens": 6433,
+  "total_completion_tokens": 371,
+  "total_reasoning_tokens": 0,
+  "total_tokens": 6804,
+  "total_cost_usd": 0.00433,
+  "total_cost_inr": 0.4153,
+  "tools_called_count": 5,
+  "memory_hits_count": 0,
+  "claims_total": 1,
+  "claims_supported": 0,
+  "claims_contradicted": 0,
+  "claims_unsupported": 0,
+  "claims_uncited": 1,
+  "audit_pass_rate": 0.0,
+  "step_traces": [
+    {
+      "step_name": "analyst_planning",
+      "latency_ms": 7086.58,
+      "usage": {
+        "model_name": "gemini-3.5-flash-lite",
+        "provider": "analyst",
+        "prompt_tokens": 347,
+        "completion_tokens": 202,
+        "reasoning_tokens": 0,
+        "cached_tokens": 0,
+        "cost_usd": 0.0007795,
+        "cost_inr": 0.07476964
+      },
+      "metadata": {}
+    },
+    {
+      "step_name": "analyst_web_search",
+      "latency_ms": 5570.71,
+      "usage": null,
+      "metadata": {}
+    },
+    {
+      "step_name": "analyst_web_scraping",
+      "latency_ms": 2109.16,
+      "usage": null,
+      "metadata": {}
+    },
+    {
+      "step_name": "analyst_synthesis",
+      "latency_ms": 6831.44,
+      "usage": {
+        "model_name": "gemini-3.5-flash-lite",
+        "provider": "analyst",
+        "prompt_tokens": 5484,
+        "completion_tokens": 43,
+        "reasoning_tokens": 0,
+        "cached_tokens": 0,
+        "cost_usd": 0.0028710000000000003,
+        "cost_inr": 0.27538632
+      },
+      "metadata": {}
+    },
+    {
+      "step_name": "auditor_claim_extraction",
+      "latency_ms": 7383.07,
+      "usage": {
+        "model_name": "gemini-3.5-flash-lite",
+        "provider": "auditor",
+        "prompt_tokens": 602,
+        "completion_tokens": 126,
+        "reasoning_tokens": 0,
+        "cached_tokens": 0,
+        "cost_usd": 0.000679,
+        "cost_inr": 0.06512968000000001
+      },
+      "metadata": {}
+    }
+  ],
+  "timestamp": "2026-09-26T18:58:52.109551+00:00"
+}

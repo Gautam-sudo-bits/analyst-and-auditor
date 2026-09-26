@@ -1,0 +1,80 @@
+{
+  "question_id": 2,
+  "question_text": "List the primary external funding rounds, transaction valuations, and lead institutional investors backing Indian omnichannel jewellery brand BlueStone between 2023 and 2024.",
+  "wall_clock_seconds": 29.288,
+  "exceeded_2min_ceiling": false,
+  "total_prompt_tokens": 6240,
+  "total_completion_tokens": 294,
+  "total_reasoning_tokens": 0,
+  "total_tokens": 6534,
+  "total_cost_usd": 0.004002,
+  "total_cost_inr": 0.3839,
+  "tools_called_count": 5,
+  "memory_hits_count": 0,
+  "claims_total": 0,
+  "claims_supported": 0,
+  "claims_contradicted": 0,
+  "claims_unsupported": 0,
+  "claims_uncited": 0,
+  "audit_pass_rate": 0.0,
+  "step_traces": [
+    {
+      "step_name": "analyst_planning",
+      "latency_ms": 7401.72,
+      "usage": {
+        "model_name": "gemini-3.5-flash-lite",
+        "provider": "analyst",
+        "prompt_tokens": 329,
+        "completion_tokens": 201,
+        "reasoning_tokens": 0,
+        "cached_tokens": 0,
+        "cost_usd": 0.0007675,
+        "cost_inr": 0.07361859999999999
+      },
+      "metadata": {}
+    },
+    {
+      "step_name": "analyst_web_search",
+      "latency_ms": 4824.88,
+      "usage": null,
+      "metadata": {}
+    },
+    {
+      "step_name": "analyst_web_scraping",
+      "latency_ms": 3184.53,
+      "usage": null,
+      "metadata": {}
+    },
+    {
+      "step_name": "analyst_synthesis",
+      "latency_ms": 7161.41,
+      "usage": {
+        "model_name": "gemini-3.5-flash-lite",
+        "provider": "analyst",
+        "prompt_tokens": 5191,
+        "completion_tokens": 87,
+        "reasoning_tokens": 0,
+        "cached_tokens": 0,
+        "cost_usd": 0.0028564999999999997,
+        "cost_inr": 0.27399547999999996
+      },
+      "metadata": {}
+    },
+    {
+      "step_name": "auditor_claim_extraction",
+      "latency_ms": 6713.15,
+      "usage": {
+        "model_name": "gemini-3.5-flash-lite",
+        "provider": "auditor",
+        "prompt_tokens": 720,
+        "completion_tokens": 6,
+        "reasoning_tokens": 0,
+        "cached_tokens": 0,
+        "cost_usd": 0.00037799999999999997,
+        "cost_inr": 0.03625776
+      },
+      "metadata": {}
+    }
+  ],
+  "timestamp": "2026-09-26T18:55:36.251024+00:00"
+}

@@ -1,0 +1,74 @@
+[
+  {
+    "question_id": 1,
+    "theme": "Titan Retail Expansion (Cold Baseline)",
+    "difficulty": "2/5",
+    "question_text": "Which Indian jewellery retailer opened the most net new physical stores across FY23 and FY24, and what was the exact store count growth cited for each year?",
+    "target_entities": ["Titan Company", "Tanishq"],
+    "memory_type": "cold_start",
+    "notes": "Seeds Titan FY23 and FY24 store metrics into memory."
+  },
+  {
+    "question_id": 2,
+    "theme": "Quick-Commerce 2024 Capital Infusions (Cold Baseline)",
+    "difficulty": "3/5",
+    "question_text": "List every primary funding round or capital infusion raised by Zepto and Blinkit during calendar year 2024, including reported valuations, lead institutional investors, and transaction dates.",
+    "target_entities": ["Zepto", "Blinkit"],
+    "memory_type": "cold_start",
+    "notes": "Seeds Zepto and Blinkit cap table and 2024 round valuations."
+  },
+  {
+    "question_id": 3,
+    "theme": "Executive Tenure & Lineage Verification (Cold Baseline)",
+    "difficulty": "3.5/5",
+    "question_text": "Identify the current Head of Engineering or CTO at Zepto, the month and year they assumed the role, and which two companies they worked at immediately prior.",
+    "target_entities": ["Zepto"],
+    "memory_type": "cold_start",
+    "notes": "Seeds engineering leadership and previous employer entities."
+  },
+  {
+    "question_id": 4,
+    "theme": "Source Discrepancy Resolution (Cold Baseline)",
+    "difficulty": "4/5",
+    "question_text": "What was Blinkit's reported Gross Order Value (GOV) contribution to Zomato in Q3 FY24 vs Q4 FY24? Explicitly identify and reconcile any discrepancies between news media estimates and official shareholder letters, justifying your selection.",
+    "target_entities": ["Blinkit", "Zomato"],
+    "memory_type": "cold_start",
+    "notes": "Exercises contradiction resolution between media headlines and regulatory filings."
+  },
+  {
+    "question_id": 5,
+    "theme": "Comparative Capital Velocity (Warm Memory Transfer 1)",
+    "difficulty": "3/5",
+    "question_text": "Comparing Zepto and Blinkit based on their 2024 capital moves: which entity secured a higher single valuation step-up in 2024, and what are their respective lead institutional investors backing that round?",
+    "target_entities": ["Zepto", "Blinkit"],
+    "memory_type": "warm_memory",
+    "notes": "Reuses verified rounds from Q2 & Q4. Web searches drop -> Cost drops by >50%."
+  },
+  {
+    "question_id": 6,
+    "theme": "Cross-Sector Executive Lineage (Warm Memory Transfer 2)",
+    "difficulty": "4.5/5",
+    "question_text": "Did any former leadership or senior engineering executives from the previous employers of Zepto's engineering head transition into the Indian quick commerce or jewellery retail sectors between 2023 and 2024?",
+    "target_entities": ["Zepto", "Titan Company"],
+    "memory_type": "warm_memory",
+    "notes": "Traverses talent lineage using prior employer facts from Q3 memory."
+  },
+  {
+    "question_id": 7,
+    "theme": "Cross-Industry Operational Velocity (Warm Memory Transfer 3)",
+    "difficulty": "4/5",
+    "question_text": "Between Titan Company and Blinkit, compare their operational expansion velocity in FY24: contrast Titan's net physical retail store additions with Blinkit's net new dark store additions.",
+    "target_entities": ["Titan Company", "Blinkit"],
+    "memory_type": "warm_memory",
+    "notes": "Reuses Titan FY24 store data from Q1 and Blinkit base data from Q4. Cost drops by >55%."
+  },
+  {
+    "question_id": 8,
+    "theme": "Capstone Synthesis & Contradiction Resolution (Max Memory Reuse)",
+    "difficulty": "5/5",
+    "question_text": "Synthesize the physical and capital expansion models of Zepto, Blinkit, and Titan in FY24: which entity demonstrated the lowest capital burn per new operational footprint (store/dark store), and what are the explicit contradictory estimates provided by financial analysts regarding their future expansion costs?",
+    "target_entities": ["Zepto", "Blinkit", "Titan Company"],
+    "memory_type": "warm_memory",
+    "notes": "Capstone: reuses memory across Q1, Q2, Q4, Q7. Reconciles contradictory analyst forecasts."
+  }
+]

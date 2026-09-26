@@ -1,0 +1,29 @@
+{
+  "question_id": 999,
+  "question_text": "Simulate a hanging external task",
+  "wall_clock_seconds": 0.407,
+  "exceeded_2min_ceiling": true,
+  "total_prompt_tokens": 0,
+  "total_completion_tokens": 0,
+  "total_reasoning_tokens": 0,
+  "total_tokens": 0,
+  "total_cost_usd": 0.0,
+  "total_cost_inr": 0.0,
+  "tools_called_count": 0,
+  "memory_hits_count": 0,
+  "claims_total": 0,
+  "claims_supported": 0,
+  "claims_contradicted": 0,
+  "claims_unsupported": 0,
+  "claims_uncited": 0,
+  "audit_pass_rate": 0.0,
+  "step_traces": [
+    {
+      "step_name": "analyst_planning",
+      "latency_ms": 405.88,
+      "usage": null,
+      "metadata": {}
+    }
+  ],
+  "timestamp": "2026-09-26T14:48:53.077590+00:00"
+}

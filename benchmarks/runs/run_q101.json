@@ -1,0 +1,101 @@
+{
+  "question_id": 101,
+  "question_text": "Which Indian quick commerce company expanded dark stores the fastest in 2024?",
+  "wall_clock_seconds": 22.323,
+  "exceeded_2min_ceiling": false,
+  "total_prompt_tokens": 9537,
+  "total_completion_tokens": 3039,
+  "total_reasoning_tokens": 1994,
+  "total_tokens": 12576,
+  "total_cost_usd": 0.007003,
+  "total_cost_inr": 0.6717,
+  "tools_called_count": 6,
+  "memory_hits_count": 0,
+  "claims_total": 4,
+  "claims_supported": 0,
+  "claims_contradicted": 0,
+  "claims_unsupported": 1,
+  "claims_uncited": 3,
+  "audit_pass_rate": 0.0,
+  "step_traces": [
+    {
+      "step_name": "analyst_planning",
+      "latency_ms": 2602.96,
+      "usage": {
+        "model_name": "gemini-3.5-flash-lite",
+        "provider": "analyst",
+        "prompt_tokens": 312,
+        "completion_tokens": 172,
+        "reasoning_tokens": 0,
+        "cached_tokens": 0,
+        "cost_usd": 0.000672,
+        "cost_inr": 0.06445824
+      },
+      "metadata": {}
+    },
+    {
+      "step_name": "analyst_web_search",
+      "latency_ms": 5506.82,
+      "usage": null,
+      "metadata": {}
+    },
+    {
+      "step_name": "analyst_web_scraping",
+      "latency_ms": 1664.24,
+      "usage": null,
+      "metadata": {}
+    },
+    {
+      "step_name": "analyst_synthesis",
+      "latency_ms": 4139.27,
+      "usage": {
+        "model_name": "gemini-3.5-flash-lite",
+        "provider": "analyst",
+        "prompt_tokens": 5818,
+        "completion_tokens": 496,
+        "reasoning_tokens": 0,
+        "cached_tokens": 0,
+        "cost_usd": 0.004397,
+        "cost_inr": 0.42176024
+      },
+      "metadata": {}
+    },
+    {
+      "step_name": "auditor_claim_extraction",
+      "latency_ms": 5320.06,
+      "usage": {
+        "model_name": "openai/gpt-oss-120b",
+        "provider": "auditor",
+        "prompt_tokens": 1049,
+        "completion_tokens": 2048,
+        "reasoning_tokens": 1821,
+        "cached_tokens": 0,
+        "cost_usd": 0.00138615,
+        "cost_inr": 0.132959508
+      },
+      "metadata": {}
+    },
+    {
+      "step_name": "auditor_source_fetching",
+      "latency_ms": 1797.21,
+      "usage": null,
+      "metadata": {}
+    },
+    {
+      "step_name": "auditor_verify_claim_03",
+      "latency_ms": 1288.35,
+      "usage": {
+        "model_name": "openai/gpt-oss-120b",
+        "provider": "auditor",
+        "prompt_tokens": 2358,
+        "completion_tokens": 323,
+        "reasoning_tokens": 173,
+        "cached_tokens": 0,
+        "cost_usd": 0.0005475,
+        "cost_inr": 0.052516200000000006
+      },
+      "metadata": {}
+    }
+  ],
+  "timestamp": "2026-09-26T14:47:19.382753+00:00"
+}

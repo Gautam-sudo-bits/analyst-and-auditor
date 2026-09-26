@@ -1,0 +1,131 @@
+{
+  "question_id": 5,
+  "question_text": "Comparing digital-first jewellery brands CaratLane and BlueStone based on their recent corporate transactions: what was the valuation multiple Titan paid to acquire the founder's remaining stake in CaratLane compared to BlueStone's 2024 funding valuation?",
+  "wall_clock_seconds": 40.805,
+  "exceeded_2min_ceiling": false,
+  "total_prompt_tokens": 6408,
+  "total_completion_tokens": 1979,
+  "total_reasoning_tokens": 0,
+  "total_tokens": 8387,
+  "total_cost_usd": 0.009141,
+  "total_cost_inr": 0.8768,
+  "tools_called_count": 6,
+  "memory_hits_count": 0,
+  "claims_total": 3,
+  "claims_supported": 0,
+  "claims_contradicted": 1,
+  "claims_unsupported": 2,
+  "claims_uncited": 0,
+  "audit_pass_rate": 0.0,
+  "step_traces": [
+    {
+      "step_name": "analyst_planning",
+      "latency_ms": 7453.64,
+      "usage": {
+        "model_name": "gemini-3.5-flash-lite",
+        "provider": "analyst",
+        "prompt_tokens": 347,
+        "completion_tokens": 194,
+        "reasoning_tokens": 0,
+        "cached_tokens": 0,
+        "cost_usd": 0.0007555000000000001,
+        "cost_inr": 0.07246756000000001
+      },
+      "metadata": {}
+    },
+    {
+      "step_name": "analyst_web_search",
+      "latency_ms": 5024.59,
+      "usage": null,
+      "metadata": {}
+    },
+    {
+      "step_name": "analyst_web_scraping",
+      "latency_ms": 1353.74,
+      "usage": null,
+      "metadata": {}
+    },
+    {
+      "step_name": "analyst_synthesis",
+      "latency_ms": 8036.18,
+      "usage": {
+        "model_name": "gemini-3.5-flash-lite",
+        "provider": "analyst",
+        "prompt_tokens": 1992,
+        "completion_tokens": 486,
+        "reasoning_tokens": 0,
+        "cached_tokens": 0,
+        "cost_usd": 0.002454,
+        "cost_inr": 0.23538768000000002
+      },
+      "metadata": {}
+    },
+    {
+      "step_name": "auditor_claim_extraction",
+      "latency_ms": 8710.14,
+      "usage": {
+        "model_name": "gemini-3.5-flash-lite",
+        "provider": "auditor",
+        "prompt_tokens": 1128,
+        "completion_tokens": 930,
+        "reasoning_tokens": 0,
+        "cached_tokens": 0,
+        "cost_usd": 0.0033539999999999998,
+        "cost_inr": 0.32171568
+      },
+      "metadata": {}
+    },
+    {
+      "step_name": "auditor_source_fetching",
+      "latency_ms": 1060.73,
+      "usage": null,
+      "metadata": {}
+    },
+    {
+      "step_name": "auditor_verify_claim_01",
+      "latency_ms": 7358.63,
+      "usage": {
+        "model_name": "gemini-3.5-flash-lite",
+        "provider": "auditor",
+        "prompt_tokens": 1003,
+        "completion_tokens": 193,
+        "reasoning_tokens": 0,
+        "cached_tokens": 0,
+        "cost_usd": 0.0010804999999999999,
+        "cost_inr": 0.10364156
+      },
+      "metadata": {}
+    },
+    {
+      "step_name": "auditor_verify_claim_02",
+      "latency_ms": 7361.82,
+      "usage": {
+        "model_name": "gemini-3.5-flash-lite",
+        "provider": "auditor",
+        "prompt_tokens": 972,
+        "completion_tokens": 88,
+        "reasoning_tokens": 0,
+        "cached_tokens": 0,
+        "cost_usd": 0.00075,
+        "cost_inr": 0.07194
+      },
+      "metadata": {}
+    },
+    {
+      "step_name": "auditor_verify_claim_03",
+      "latency_ms": 8374.46,
+      "usage": {
+        "model_name": "gemini-3.5-flash-lite",
+        "provider": "auditor",
+        "prompt_tokens": 966,
+        "completion_tokens": 88,
+        "reasoning_tokens": 0,
+        "cached_tokens": 0,
+        "cost_usd": 0.000747,
+        "cost_inr": 0.07165224
+      },
+      "metadata": {}
+    }
+  ],
+  "timestamp": "2026-09-26T18:58:15.104482+00:00"
+}

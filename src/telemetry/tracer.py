@@ -60,7 +60,6 @@ def extract_usage(
         completion_tokens = getattr(meta, "candidates_token_count", 0) or 0
         cached_tokens = getattr(meta, "cached_content_token_count", 0) or 0
         
-        # Safe inspection for Gemini thinking/reasoning tokens
         reasoning_tokens = (
             getattr(meta, "thought_token_count", 0)
             or getattr(getattr(meta, "candidates_tokens_details", None), "thought_tokens", 0)
@@ -73,15 +72,13 @@ def extract_usage(
         prompt_tokens = getattr(usage, "prompt_tokens", 0) or 0
         completion_tokens = getattr(usage, "completion_tokens", 0) or 0
 
-        # Check prompt caching details
         if hasattr(usage, "prompt_tokens_details") and usage.prompt_tokens_details:
             cached_tokens = getattr(usage.prompt_tokens_details, "cached_tokens", 0) or 0
 
-        # Check reasoning tokens without double-counting
         if hasattr(usage, "completion_tokens_details") and usage.completion_tokens_details:
             reasoning_tokens = getattr(usage.completion_tokens_details, "reasoning_tokens", 0) or 0
 
-    # 3. Dict fallback (for mocks or deserialized payloads)
+    # 3. Dict fallback
     elif isinstance(response, dict):
         prompt_tokens = response.get("prompt_tokens", 0)
         completion_tokens = response.get("completion_tokens", 0)
@@ -200,7 +197,6 @@ class TelemetryTracer:
                 total_cost_usd += trace.usage.cost_usd
                 total_cost_inr += trace.usage.cost_inr
 
-        # Calculate claim metrics
         claims_total = sum(self.audit_counts.values())
         claims_supported = self.audit_counts.get("SUPPORTED", 0)
         claims_contradicted = self.audit_counts.get("CONTRADICTED", 0)
@@ -237,7 +233,6 @@ class TelemetryTracer:
         """Renders live terminal execution table with latency, token economics, and audit metrics."""
         t = telemetry or self._finalized_telemetry or self.finalize()
 
-        # Latency styling
         if t.wall_clock_seconds < 60.0:
             latency_style = "[bold green]"
         elif t.wall_clock_seconds <= 120.0:
@@ -289,7 +284,6 @@ class TelemetryTracer:
 
         console.print("\n", table)
 
-        # Print Evaluation Summary Banner
         eval_panel = Panel(
             f"[bold]Tools Dispatched:[/bold] {t.tools_called_count}  |  "
             f"[bold]Memory Hits:[/bold] {t.memory_hits_count}  |  "

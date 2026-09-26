@@ -1,0 +1,74 @@
+[
+  {
+    "question_id": 1,
+    "theme": "Titan & CaratLane FY24 Retail Expansion (Cold Baseline)",
+    "difficulty": "2/5",
+    "question_text": "Across FY23 and FY24, how many net new physical stores did Titan Company add to its jewellery division (including Tanishq, Mia, and CaratLane), and what was the reported total store count by end of FY24?",
+    "target_entities": ["Titan Company", "CaratLane", "Tanishq"],
+    "memory_type": "cold_start",
+    "notes": "Seeds Titan and CaratLane store count metrics into memory."
+  },
+  {
+    "question_id": 2,
+    "theme": "BlueStone Omnichannel Capital Infusions (Cold Baseline)",
+    "difficulty": "3/5",
+    "question_text": "List the primary external funding rounds, transaction valuations, and lead institutional investors backing Indian omnichannel jewellery brand BlueStone between 2023 and 2024.",
+    "target_entities": ["BlueStone"],
+    "memory_type": "cold_start",
+    "notes": "Seeds BlueStone valuation and cap table metrics."
+  },
+  {
+    "question_id": 3,
+    "theme": "Lenskart Executive Leadership & Technology Lineage (Cold Baseline)",
+    "difficulty": "3.5/5",
+    "question_text": "Identify the current Head of Engineering or Chief Technology Officer at Indian eyewear unicorn Lenskart, the year they joined, and which two prominent technology companies they worked at prior to Lenskart.",
+    "target_entities": ["Lenskart"],
+    "memory_type": "cold_start",
+    "notes": "Seeds Lenskart engineering leadership and career background."
+  },
+  {
+    "question_id": 4,
+    "theme": "Lenskart Financial Valuation Discrepancy Resolution (Cold Baseline)",
+    "difficulty": "4/5",
+    "question_text": "What was Lenskart's reported secondary transaction valuation or revenue in FY24? Explicitly identify and reconcile any conflicting figures cited by financial media versus official regulatory ROC filings, justifying which number is more authoritative.",
+    "target_entities": ["Lenskart"],
+    "memory_type": "cold_start",
+    "notes": "Forces contradiction resolution between media valuation claims and audited financial disclosures."
+  },
+  {
+    "question_id": 5,
+    "theme": "CaratLane vs BlueStone Capital Efficiency (Warm Memory Transfer 1)",
+    "difficulty": "3/5",
+    "question_text": "Comparing digital-first jewellery brands CaratLane and BlueStone based on their recent corporate transactions: what was the valuation multiple Titan paid to acquire the founder's remaining stake in CaratLane compared to BlueStone's 2024 funding valuation?",
+    "target_entities": ["CaratLane", "Titan Company", "BlueStone"],
+    "memory_type": "warm_memory",
+    "notes": "Reuses CaratLane and BlueStone facts from Q1 & Q2. Bypasses redundant web searches -> Cost drops >50%."
+  },
+  {
+    "question_id": 6,
+    "theme": "Eyewear & D2C Engineering Talent Mobility (Warm Memory Transfer 2)",
+    "difficulty": "4.5/5",
+    "question_text": "Did any former engineering directors or product leaders from the previous employers of Lenskart's tech head transition into Indian omnichannel jewellery retail (such as BlueStone, CaratLane, or Titan) between 2023 and 2024?",
+    "target_entities": ["Lenskart", "BlueStone", "Titan Company"],
+    "memory_type": "warm_memory",
+    "notes": "Traverses career relationships using Q3 verified prior employer facts."
+  },
+  {
+    "question_id": 7,
+    "theme": "Omnichannel Physical Store Expansion Velocity (Warm Memory Transfer 3)",
+    "difficulty": "4/5",
+    "question_text": "Between Titan Company's jewellery retail network and Lenskart's physical store expansion, compare their net new retail store additions in FY24. Which omnichannel retail model demonstrated faster physical footprint expansion?",
+    "target_entities": ["Titan Company", "Lenskart"],
+    "memory_type": "warm_memory",
+    "notes": "Reuses Titan FY24 store data from Q1 and Lenskart metrics from Q4. Cost drops >55%."
+  },
+  {
+    "question_id": 8,
+    "theme": "Omnichannel Retail Capstone Synthesis & Valuation Disagreements (Max Memory Reuse)",
+    "difficulty": "5/5",
+    "question_text": "Synthesize the omnichannel growth models of Titan (CaratLane), BlueStone, and Lenskart in FY24: which retail ecosystem achieved the lowest capital expenditure per new physical store opened, and what are the explicit contradictory estimates provided by retail equity analysts regarding their 2025 expansion budgets?",
+    "target_entities": ["Titan Company", "CaratLane", "BlueStone", "Lenskart"],
+    "memory_type": "warm_memory",
+    "notes": "Capstone: reuses memory across Q1, Q2, Q4, Q7. Reconciles contradictory forward-looking analyst forecasts."
+  }
+]

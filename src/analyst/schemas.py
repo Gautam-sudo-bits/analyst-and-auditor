@@ -1,9 +1,12 @@
 """
 Pydantic v2 schemas for research plans, citation anchors, and research outcomes.
+Includes ranked_chunks preservation for revision context.
 """
 
 from typing import List
 from pydantic import BaseModel, Field
+
+from src.tools.schemas import ScrapedChunk
 
 
 class ResearchPlan(BaseModel):
@@ -31,6 +34,7 @@ class AnalystResearchResult(BaseModel):
     plan: ResearchPlan
     draft_answer: str = Field(description="Synthesized markdown with [^n] citations and bibliography")
     citations: List[CitationReference] = Field(default_factory=list)
+    ranked_chunks: List[ScrapedChunk] = Field(default_factory=list, description="Preserved web chunks for revision context")
     tools_called_count: int = Field(default=0, ge=0)
     memory_hits_used: int = Field(default=0, ge=0)
     has_epistemic_refusal: bool = Field(default=False, description="True if answer flagged [INSUFFICIENT EVIDENCE]")

@@ -1,0 +1,146 @@
+{
+  "titan_company": {
+    "entity_id": "titan_company",
+    "canonical_name": "Titan Company Limited",
+    "aliases": [
+      "titan",
+      "tanishq",
+      "mia",
+      "fastrack",
+      "titan company",
+      "titan ltd",
+      "caratlane"
+    ],
+    "facts": [],
+    "created_at": "2026-09-26T18:23:09.806722+00:00",
+    "updated_at": "2026-09-26T18:23:09.806722+00:00"
+  },
+  "kalyan_jewellers": {
+    "entity_id": "kalyan_jewellers",
+    "canonical_name": "Kalyan Jewellers India Limited",
+    "aliases": [
+      "kalyan",
+      "kalyan jewellers",
+      "candere"
+    ],
+    "facts": [],
+    "created_at": "2026-09-26T18:23:09.806722+00:00",
+    "updated_at": "2026-09-26T18:23:09.806722+00:00"
+  },
+  "zepto": {
+    "entity_id": "zepto",
+    "canonical_name": "Zepto (Kiranakart Technologies)",
+    "aliases": [
+      "zepto",
+      "kiranakart",
+      "zepto cafe"
+    ],
+    "facts": [
+      {
+        "fact_id": "fact_79c730493a",
+        "attribute": "current_cto",
+        "value": "Nikhil Mittal",
+        "temporal_anchor": "current",
+        "source_url": "https://www.businessworld.in/article/zepto-appoints-nikhil-mittal-as-cto-507886",
+        "evidence_quote": "Zepto, the quick-commerce unicorn, has appointed Nikhil Mittal as its Chief Technology Officer (CTO).",
+        "confidence": 1.0,
+        "auditor_verdict": "SUPPORTED",
+        "timestamp": "2026-09-26T18:25:15.480585+00:00"
+      },
+      {
+        "fact_id": "fact_cfef441504",
+        "attribute": "previous_role",
+        "value": "Senior Vice President of Engineering",
+        "temporal_anchor": "prior",
+        "source_url": "https://www.businessworld.in/article/zepto-appoints-nikhil-mittal-as-cto-507886",
+        "evidence_quote": "Formerly the Senior Vice President of Engineering at Zepto, Mittal is the first employee of the startup to assume this key position.",
+        "confidence": 1.0,
+        "auditor_verdict": "SUPPORTED",
+        "timestamp": "2026-09-26T18:25:15.488226+00:00"
+      }
+    ],
+    "created_at": "2026-09-26T18:23:09.806722+00:00",
+    "updated_at": "2026-09-26T18:25:15.488226+00:00"
+  },
+  "blinkit": {
+    "entity_id": "blinkit",
+    "canonical_name": "Blinkit (Zomato Quick Commerce)",
+    "aliases": [
+      "blinkit",
+      "grofers",
+      "zomato quick commerce"
+    ],
+    "facts": [
+      {
+        "fact_id": "fact_2bd07086b9",
+        "attribute": "gov_yoy_growth",
+        "value": "103%",
+        "temporal_anchor": "Q3 FY24",
+        "source_url": "https://inc42.com/buzz/zomato-q3-blinkit-posts-second-consecutive-contribution-positive-quarter/",
+        "evidence_quote": "While GOV soared 103% year-on-year (YoY) to INR 3,542 in the quarter ended December 2023, average order value (AOV) jumped 14% YoY to INR 635 in Q3 FY24.",
+        "confidence": 1.0,
+        "auditor_verdict": "SUPPORTED",
+        "timestamp": "2026-09-26T18:26:10.456588+00:00"
+      },
+      {
+        "fact_id": "fact_c1e3e03f11",
+        "attribute": "gross_order_value",
+        "value": "INR 3,542 crore",
+        "temporal_anchor": "Q3 FY24",
+        "source_url": "https://inc42.com/buzz/zomato-q3-blinkit-posts-second-consecutive-contribution-positive-quarter/",
+        "evidence_quote": "While GOV soared 103% year-on-year (YoY) to INR 3,542 in the quarter ended December 2023, average order value (AOV) jumped 14% YoY to INR 635 in Q3 FY24.",
+        "confidence": 0.95,
+        "auditor_verdict": "SUPPORTED",
+        "timestamp": "2026-09-26T18:26:10.471463+00:00"
+      },
+      {
+        "fact_id": "fact_88f8f76de2",
+        "attribute": "contribution_margin",
+        "value": "2.4%",
+        "temporal_anchor": "Q3 FY24",
+        "source_url": "https://inc42.com/buzz/zomato-q3-blinkit-posts-second-consecutive-contribution-positive-quarter/",
+        "evidence_quote": "In its shareholders letter, Zomato said Blinkit’s contribution margin, as a percentage of gross order value (GOV), in the overall business further improved to 2.4% in Q3 FY24 from 1.3% in Q2 FY24.",
+        "confidence": 1.0,
+        "auditor_verdict": "SUPPORTED",
+        "timestamp": "2026-09-26T18:26:10.480887+00:00"
+      },
+      {
+        "fact_id": "fact_7040a160cd",
+        "attribute": "dark_store_count",
+        "value": "526 stores",
+        "temporal_anchor": "Q4 FY24",
+        "source_url": "https://www.markhub24.com/post/blinkit-s-dark-store-expansion-strategy",
+        "evidence_quote": "Blinkit's dark store count grew from 383 stores in the second quarter of FY23 to 526 by the fourth quarter of FY24.",
+        "confidence": 1.0,
+        "auditor_verdict": "SUPPORTED",
+        "timestamp": "2026-09-26T18:28:28.249774+00:00"
+      }
+    ],
+    "created_at": "2026-09-26T18:23:09.806722+00:00",
+    "updated_at": "2026-09-26T18:28:28.249774+00:00"
+  },
+  "swiggy_instamart": {
+    "entity_id": "swiggy_instamart",
+    "canonical_name": "Swiggy Instamart",
+    "aliases": [
+      "swiggy",
+      "instamart",
+      "swiggy instamart"
+    ],
+    "facts": [],
+    "created_at": "2026-09-26T18:23:09.806722+00:00",
+    "updated_at": "2026-09-26T18:23:09.806722+00:00"
+  },
+  "nvidia": {
+    "entity_id": "nvidia",
+    "canonical_name": "NVIDIA Corporation",
+    "aliases": [
+      "nvidia",
+      "nvda",
+      "geforce"
+    ],
+    "facts": [],
+    "created_at": "2026-09-26T18:23:09.806722+00:00",
+    "updated_at": "2026-09-26T18:23:09.806722+00:00"
+  }
+}

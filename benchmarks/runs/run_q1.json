@@ -1,0 +1,80 @@
+{
+  "question_id": 1,
+  "question_text": "Across FY23 and FY24, how many net new physical stores did Titan Company add to its jewellery division (including Tanishq, Mia, and CaratLane), and what was the reported total store count by end of FY24?",
+  "wall_clock_seconds": 28.285,
+  "exceeded_2min_ceiling": false,
+  "total_prompt_tokens": 3657,
+  "total_completion_tokens": 268,
+  "total_reasoning_tokens": 0,
+  "total_tokens": 3925,
+  "total_cost_usd": 0.002632,
+  "total_cost_inr": 0.2525,
+  "tools_called_count": 5,
+  "memory_hits_count": 0,
+  "claims_total": 0,
+  "claims_supported": 0,
+  "claims_contradicted": 0,
+  "claims_unsupported": 0,
+  "claims_uncited": 0,
+  "audit_pass_rate": 0.0,
+  "step_traces": [
+    {
+      "step_name": "analyst_planning",
+      "latency_ms": 8212.34,
+      "usage": {
+        "model_name": "gemini-3.5-flash-lite",
+        "provider": "analyst",
+        "prompt_tokens": 346,
+        "completion_tokens": 188,
+        "reasoning_tokens": 0,
+        "cached_tokens": 0,
+        "cost_usd": 0.000737,
+        "cost_inr": 0.07069304
+      },
+      "metadata": {}
+    },
+    {
+      "step_name": "analyst_web_search",
+      "latency_ms": 5520.48,
+      "usage": null,
+      "metadata": {}
+    },
+    {
+      "step_name": "analyst_web_scraping",
+      "latency_ms": 899.38,
+      "usage": null,
+      "metadata": {}
+    },
+    {
+      "step_name": "analyst_synthesis",
+      "latency_ms": 6977.35,
+      "usage": {
+        "model_name": "gemini-3.5-flash-lite",
+        "provider": "analyst",
+        "prompt_tokens": 2550,
+        "completion_tokens": 74,
+        "reasoning_tokens": 0,
+        "cached_tokens": 0,
+        "cost_usd": 0.0014969999999999998,
+        "cost_inr": 0.14359223999999998
+      },
+      "metadata": {}
+    },
+    {
+      "step_name": "auditor_claim_extraction",
+      "latency_ms": 6670.59,
+      "usage": {
+        "model_name": "gemini-3.5-flash-lite",
+        "provider": "auditor",
+        "prompt_tokens": 761,
+        "completion_tokens": 6,
+        "reasoning_tokens": 0,
+        "cached_tokens": 0,
+        "cost_usd": 0.0003985,
+        "cost_inr": 0.03822412
+      },
+      "metadata": {}
+    }
+  ],
+  "timestamp": "2026-09-26T18:54:58.927877+00:00"
+}
