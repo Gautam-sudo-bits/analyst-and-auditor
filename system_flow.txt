@@ -1,0 +1,84 @@
+                       ┌───────────────────────────────┐
+                       │      User Research Query      │
+                       └───────────────┬───────────────┘
+                                       │
+                                       ▼
+                       ┌───────────────────────────────┐
+                       │    Memory Interrogator        │
+                       │ (Queries Entity Memory Store) │
+                       └───────────────┬───────────────┘
+                                       │
+                   ┌───────────────────┴───────────────────┐
+                   │ Memory Hit (Partial/Full Facts)       │ Memory Miss (Cold)
+                   ▼                                       ▼
+    ┌─────────────────────────────────────────────────────────────┐
+    │                       Analyst Planner                       │
+    │  - Deconstructs query into missing factual sub-goals        │
+    │  - Skips searching for facts already certified in Memory    │
+    │  - Enforces 2-minute hard wall-clock ceiling                │
+    └──────────────────────────────┬──────────────────────────────┘
+                                   │
+                     Parallel Tool Dispatcher (Async)
+                     ┌─────────────┴─────────────┐
+                     ▼                           ▼
+        ┌─────────────────────────┐ ┌─────────────────────────┐
+        │   duckduckgo_search()   │ │    fetch_page_text()    │
+        │   (Dispatches queries)  │ │ (Async HTTP + Scraper)  │
+        └────────────┬────────────┘ └────────────┬────────────┘
+                     └─────────────┬─────────────┘
+                                   ▼
+        ┌─────────────────────────────────────────────────────────┐
+        │                    Analyst Synthesizer                  │
+        │ - Resolves conflicting source claims                    │
+        │ - Emits Draft Answer with Markdown Citations [^1], [^2] │
+        │ - Explicitly refuses if evidence is insufficient        │
+        └──────────────────────────┬──────────────────────────────┘
+                                   │
+                                   ▼
+    ═══════════════════════ FIREWALL BARRIER ═══════════════════════
+    (Analyst thoughts/prompts are completely blocked from Auditor)
+                                   │
+                                   ▼
+        ┌─────────────────────────────────────────────────────────┐
+        │                Atomic Claim Decomposer                  │
+        │ Splits draft into isolated tuples:                      │
+        │ <claim_id, atomic_fact, cited_url>                      │
+        │ Flags missing citations immediately as [UNCITED]        │
+        └──────────────────────────┬──────────────────────────────┘
+                                   │
+                                   ▼
+        ┌─────────────────────────────────────────────────────────┐
+        │               Independent Auditor Verifier              │
+        │ (Heterogeneous LLM / Blinded NLI Judge)                 │
+        │ - Fetches clean content of cited URL directly           │
+        │ - Natural Language Inference check:                     │
+        │   SUPPORTED | CONTRADICTED | UNSUPPORTED | DEAD_LINK    │
+        │ - Extracts verbatim quote from source as evidence       │
+        └──────────────────────────┬──────────────────────────────┘
+                                   │
+                                   ▼
+        ┌─────────────────────────────────────────────────────────┐
+        │                Auditor Memory Gatekeeper                │
+        │ - Any critical claim CONTRADICTED?                      │
+        │   -> Mark response as UNRELIABLE / trigger fallback     │
+        │ - Claims marked SUPPORTED?                              │
+        │   -> COMMIT to Entity Memory Store (JSON/SQLite)        │
+        │ - Claims UNSUPPORTED?                                   │
+        │   -> DROP from memory (Prevents Well-Poisoning)         │
+        └──────────────────────────┬──────────────────────────────┘
+                                   │
+                                   ▼
+        ┌─────────────────────────────────────────────────────────┐
+        │              Telemetry & Visualizer Engine              │
+        │ - Computes Token Usage (Analyst + Auditor)              │
+        │ - Calculates Cost in Rupees (INR) at spot exchange rate │
+        │ - Generates run artifact: benchmarks/runs/run_qN.json   │
+        │ - Prints live formatted Rich CLI trace to terminal      │
+        └──────────────────────────┬──────────────────────────────┘
+                                   │
+                                   ▼
+                       ┌───────────────────────┐
+                       │     Final Answer      │
+                       │ + Audit Certification │
+                       │ + Telemetry Footer    │
+                       └───────────────────────┘

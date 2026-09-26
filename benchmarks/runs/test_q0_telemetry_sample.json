@@ -1,0 +1,38 @@
+{
+  "question_id": 0,
+  "question_text": "What was Nvidia's Q4 FY25 data center revenue?",
+  "wall_clock_seconds": 0.021,
+  "exceeded_2min_ceiling": false,
+  "total_prompt_tokens": 10000,
+  "total_completion_tokens": 2000,
+  "total_reasoning_tokens": 0,
+  "total_tokens": 12000,
+  "total_cost_usd": 0.011,
+  "total_cost_inr": 0.935,
+  "tools_called_count": 2,
+  "memory_hits_count": 1,
+  "claims_total": 4,
+  "claims_supported": 2,
+  "claims_contradicted": 1,
+  "claims_unsupported": 1,
+  "claims_uncited": 0,
+  "audit_pass_rate": 0.5,
+  "step_traces": [
+    {
+      "step_name": "analyst_research_and_synthesis",
+      "latency_ms": 20.69,
+      "usage": {
+        "model_name": "gemini-3-flash-preview",
+        "provider": "analyst",
+        "prompt_tokens": 10000,
+        "completion_tokens": 2000,
+        "reasoning_tokens": 0,
+        "cached_tokens": 0,
+        "cost_usd": 0.011,
+        "cost_inr": 0.9349999999999999
+      },
+      "metadata": {}
+    }
+  ],
+  "timestamp": "2026-09-25T10:12:12.047406+00:00"
+}

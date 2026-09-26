@@ -4,7 +4,7 @@ analyst-and-auditor/
 ├── DECISIONS.md                                # The required 2-page architectural defense
 ├── benchmarks/                                 # The 8 test questions + evaluation traces
 ├── logs/                                       # Your AI interaction transcripts
-│   └── 01_system_architecture_and_design.md
+│   └── 01_day.md
 └── src/
     ├── analyst/                                # Part A: Planner, searcher, scraper, memory
     ├── auditor/                                # Part B: Claim extractor, fact verifier
